@@ -1,7 +1,7 @@
 .vscode/
-.class
-.ctxt
-.log
-.txt
-.bluej
+*.class
+*.ctxt
+*.log
+*.txt
+*.bluej
 cyber-kill-chain/
