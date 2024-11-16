@@ -33,7 +33,7 @@ public class RansomwareDecryption {
             // Encrypted file to be decrypted
             File encryptedFile = new File("C:\\Users\\Public\\important_document.txt.encrypted");
             // Encryption key provided by the attacker (simulated as input)
-            String keyHex = "e67cebc2c01087fc913b63e33e9703cc4d792acda3920035b4043a656a88a12b"; // Replace with the actual key you sent to the attacker
+            String keyHex = "REPLACE_WITH_YOUR+DATA"; // Replace with the actual key you sent to the attacker
             byte[] decodedKey = hexToBytes(keyHex);
             SecretKey secretKey = new SecretKeySpec(decodedKey, 0, decodedKey.length, "AES");
             // Output directory for decrypted file
