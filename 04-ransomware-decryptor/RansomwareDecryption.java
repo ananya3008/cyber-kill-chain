@@ -6,13 +6,14 @@ import java.nio.file.Files;
 
 public class RansomwareDecryption {
     // Decrypt file using AES and provided key
-    public static void decryptFile(File encryptedFile, SecretKey secretKey) throws Exception {
+    public static void decryptFile(File encryptedFile, SecretKey secretKey, String outputDirectory) throws Exception {
         Cipher cipher = Cipher.getInstance("AES");
         cipher.init(Cipher.DECRYPT_MODE, secretKey);
         byte[] encryptedBytes = Files.readAllBytes(encryptedFile.toPath());
         byte[] decryptedBytes = cipher.doFinal(encryptedBytes);
-        // Write decrypted data to a new file
-        FileOutputStream outputStream = new FileOutputStream(encryptedFile.getName().replace(".encrypted", ".decrypted"));
+        // Write decrypted data to a new file in the specified directory
+        File outputFile = new File(outputDirectory, encryptedFile.getName().replace(".encrypted", ".decrypted"));
+        FileOutputStream outputStream = new FileOutputStream(outputFile);
         outputStream.write(decryptedBytes);
         outputStream.close();
     }
@@ -30,13 +31,15 @@ public class RansomwareDecryption {
     public static void main(String[] args) {
         try {
             // Encrypted file to be decrypted
-            File encryptedFile = new File("important_document.txt.encrypted");
+            File encryptedFile = new File("C:\\Users\\Public\\important_document.txt.encrypted");
             // Encryption key provided by the attacker (simulated as input)
-            String keyHex = "YOUR_HEX_KEY_HERE"; // Replace with the actual key you sent to the attacker
+            String keyHex = "REPLACE_WITH_YOUR+DATA"; // Replace with the actual key you sent to the attacker
             byte[] decodedKey = hexToBytes(keyHex);
             SecretKey secretKey = new SecretKeySpec(decodedKey, 0, decodedKey.length, "AES");
+            // Output directory for decrypted file
+            String outputDirectory = "C:\\Users\\Public\\";
             // Decrypt the file
-            decryptFile(encryptedFile, secretKey);
+            decryptFile(encryptedFile, secretKey, outputDirectory);
             System.out.println("File decrypted successfully.");
         } catch (Exception e) {
             e.printStackTrace();

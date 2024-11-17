@@ -1,0 +1,9 @@
+.vscode/
+*.class
+*.ctxt
+*.log
+*.txt
+*.bluej
+cyber-kill-chain/
+*.encrypted
+*.decrypted
