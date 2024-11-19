@@ -1,9 +1,9 @@
 # Ransomware Simulator
-A ransomware simulator is a tool or program used to simulate the behavior of a ransomware attack. It is commonly used in cybersecurity training, testing, research, or for creating awareness within organizations. These simulators mimic the actions of real ransomware attacks, but they don't encrypt data or cause harm to systems. A common use case is to set up a simulated ransomware infection where files appear encrypted, and users are "asked" to pay a ransom to decrypt them, simulating the threat without actually causing harm.
+A ransomware simulator is a tool or program designed to mimic the behavior of a ransomware attack. It is commonly used for cybersecurity training, testing, research, and raising awareness within organizations. These simulators replicate the actions of actual ransomware attacks without encrypting data or causing harm to systems. 
 
-This is aligned to the actions on objectives phase of the cyber kill chain as the attacker has potentially gone through all the stages before accomplishing their final goal which could be sensitive data theft(data exfiltration) followed by a ransomware attack.
+One common use case involves setting up a simulated ransomware infection where files appear to be encrypted, and users are "asked" to pay a ransom to decrypt them. This effectively simulates the threat without inflicting any damage. This approach aligns with the actions and objectives phase of the cyber kill chain, where the attacker has potentially completed all prior stages before achieving their ultimate goal, which may include sensitive data theft and a ransomware attack.
 
-This tactic ensures the attacker has full control over the affected systems as the systems would be inoperable(the majority of the data is encrypted, followed by secure deletion to prevent data recovery ) and the victim would be forced to negotiate with the attacker to receive decryption keys in exchange of cryptocurrency.
+By utilizing a ransomware simulator, the attacker would have full control over the affected systems. The systems would be rendered inoperable due to the majority of the data being encrypted, followed by secure deletion to prevent data recovery. Consequently, the victim is left with no choice but to negotiate with the attacker for decryption keys, typically in cryptocurrency exchange.
 
 ## Plaintext
 The original file **"important_document.txt"**
@@ -21,6 +21,6 @@ Encrypted File **"important_document.txt.encrypted"**
 ![encrypted output](encrypted_output.png)
 
 ## Next Steps
-* Upgrade the program to dynamically receive a list of directeries to be encrypted.
-* Upgrade the program to send the encryption key to the attackers command and control(C2)
-* Test the execution against common security products to ensure it is evasive in nature.
+- Modify the program to dynamically accept a list of directories that need to be encrypted.
+- Enhance the program to transmit the encryption key to the attacker's command and control (C2) server.
+- Conduct tests against common security products to verify the program's ability to evade detection.
