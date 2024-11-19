@@ -22,4 +22,5 @@ Decrypted File **"important_document.txt.decrypted"**
 ![encrypted output](decrypted_output.png)
 
 ## Next Steps
-* Explain further improvements
+* Upgrade the program to dynamically choose directories to be decrypted.
+*Test it out against common security products to make sure it is evasive in nature.
