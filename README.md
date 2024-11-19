@@ -18,5 +18,5 @@ Each project folder has a README file with more details.
 * basic cybersecurity concepts
 
 ## LOCKHEED MARTIN CYBER KILL CHAIN
-Lockheed martin came up with this cyber-kill-chain framework to add understanding to the complexities of modern day cyber attacks. Today we deal with advanced persistant threats (APT) who have greater understanding , skills, time and resouces to carry out cyber attacks against organisations and world governments at a scale equivalent to an army.
+Lockheed martin came up with this cyber-kill-chain framework to add understanding to the complexities of modern day cyber attacks. Today we deal with advanced persistant threats (APT) who have greater understanding , skills, time and resouces to carry out cyber attacks against organisations and world governments at a scale equivalent to an army. the below diagram displays how each phase of an attack is composed, and how attackers may combine multiple phases or skip through some to arcitect rheir attack plans.
 ![cyber-kill-chain diagram](https://www.lockheedmartin.com/content/dam/lockheed-martin/rms/photo/cyber/THE-CYBER-KILL-CHAIN-body.png.pc-adaptive.990.medium.png)
