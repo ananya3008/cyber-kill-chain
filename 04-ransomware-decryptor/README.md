@@ -1,10 +1,9 @@
 # Ransomware Decryptor
-A ransomware decryptor is a tool designed to decrypt files that have been encrypted by ransomware. Ransomware attacks typically involve the encryption of files and demanding a ransom for the decryption key. In cases where the victim doesn't want to pay or where the ransom demand is suspicious or untrustworthy, decryption tools can be used to recover files, assuming a decryptor has been developed. It helps victims recover their data when possible.
+A ransomware decryptor is a tool designed to restore files that have been encrypted by ransomware. Ransomware attacks typically involve the encryption of files, with attackers demanding a ransom in exchange for the decryption key. In cases where the victim chooses not to pay the ransom or finds the demand suspicious or untrustworthy, decryption tools may be used to recover files, provided that a decryptor has been developed. These tools assist victims in recovering their data when possible.
 
-This is an extension to the ransomware simulator program and aligns with actions on the objectives phase og the cyber kill chain.
+This decryptor serves as an extension of the ransomware simulator program and corresponds with actions in the objectives phase of the cyber kill chain.
 
-This program is often dropped by the attackers before the ransomware attack as a means for the victim to recover their systems however this program is only used by the victim if they receive the decryption keys from the attacker, or the victim can analyze or [figure out the decryption keys on their own](https://www.nomoreransom.org/en/decryption-tools.html) or with the help of an information security team.
-
+Attackers often drop this program before launching a ransomware attack, intending to provide victims with a means to recover their systems. However, the program is only useful to the victim if they receive the decryption keys from the attacker or if they are able to analyze or uncover the decryption keys independently, or with assistance from an information security team.
 
 ## Plaintext
 The original file **"important_document.txt"**
@@ -22,5 +21,5 @@ Decrypted File **"important_document.txt.decrypted"**
 ![encrypted output](decrypted_output.png)
 
 ## Next Steps
-* Upgrade the program to dynamically choose directories to be decrypted.
-*Test it out against common security products to make sure it is evasive in nature.
+*Enhance the program to choose directories for decryption dynamically.
+*Test it against common security products to ensure it remains evasive.
